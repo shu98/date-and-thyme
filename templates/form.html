@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+</html>
+
+<head>
+	<meta charset="utf-8">
+	<title>
+		Date &amp; Thyme
+	</title>
+<!-- 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<style type="text/css">
+		font-family: 'Raleway';
+	</style> -->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+</body>
+
+	<div style="float:left; width:70%;">
+		<img src="{{ url_for('static', filename='photo.jpg') }}" style="width:90%">
+	</div>
+
+	<div style="float:left; width:30%;">
+
+		<h1>
+			Enter corresponding box numbers, separated by spaces.
+		</h1>
+
+		<form action="/event" method="post">
+	  		Event name: <input class="forms" type="text" name="name"> <br> <br>
+	  		Location: <input class="forms" type="text" name="location"> <br> <br>
+	  		Start date: <input class="forms" type="text" name="start_date"> <br>
+	  		Start time: <input class="forms" type="text" name="start_time"> <br> <br>
+	  		End date: <input class="forms" type="text" name="end_date"> <br>
+	  		End time: <input class="forms" type="text" name="end_time">
+
+	  		<br> <br> <br>
+
+	  		<input type="submit" value="Create Event!">
+		</form>
+	</div>
+	
+</body>
+
+</html>
